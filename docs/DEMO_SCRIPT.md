@@ -1,32 +1,108 @@
-# MandateGuard — 90-Second Demo Script
+# MandateGuard — 90-Second Judge Demo
 
-**Visual:** Terminal split screen. Top half shows the AI Agent's thought process. Bottom half shows MandateGuard's deterministic verification engine.
+## Recording setup
 
----
+Use one terminal and the GitHub README. Do not broadcast a new transaction.
 
-**[0:00 - 0:15] The Premise**
-**Speaker:** "Autonomous agents are the future, but right now, giving an agent a wallet is a blank check. If it hallucinates or gets exploited, your treasury is gone. Traditional guardrails rely on the agent policing itself. MandateGuard changes that."
+Before recording:
 
----
+```bash
+npm ci
+npm test -- --runInBand
+npm run typecheck
+```
 
-**[0:15 - 0:30] "Agent Proposes" & "Policy Allows"**
-*(Visual: Agent requests to swap 0.001 SOL for USDC. Policy Engine issues a Mandate with constraints and a cryptographic nonce.)*
-**Speaker:** "Here, the agent proposes a trade. Our Policy Engine authorizes it, issuing a cryptographic 'Mandate'. This Mandate defines strict economic bounds: maximum input, minimum output, and exact destination accounts, locked with a unique nonce."
+For the recorded proof, run only:
 
----
-
-**[0:30 - 0:45] "Solana Executes"**
-*(Visual: Agent builds the Jupiter transaction, injects the memo binding, signs, and broadcasts. Terminal shows the Solana transaction signature.)*
-**Speaker:** "The agent takes that Mandate, builds the trade via Jupiter, injects the nonce into the transaction memo, and executes it on Solana. The trade is live."
-
----
-
-**[0:45 - 0:65] "MandateGuard Independently Verifies"**
-*(Visual: Agent asks to proceed to the next step. MandateGuard steps in, fetching the raw transaction from the Solana RPC—ignoring the agent's claims.)*
-**Speaker:** "Now the crucial part. Before the agent is allowed to take its next action, MandateGuard steps in. It completely ignores what the agent *says* happened, and instead fetches the ground truth directly from the Solana RPC. It verifies the memo binding, isolates infrastructure rent costs, and enforces the economic bounds."
+```bash
+npm run demo
+```
 
 ---
 
-**[0:65 - 0:90] "Next Action Only Unlocks After VERIFIED"**
-*(Visual: Terminal runs the demo script. Shows Scenario 1 passing [VERIFIED]. Shows Scenario 2 [Replay] failing [BLOCKED]. Shows Scenario 3 [Policy Violation] failing [BLOCKED].)*
-**Speaker:** "If the trade is valid, MandateGuard returns 'VERIFIED', unlocking the agent's next action. If the agent tries a replay attack, or exceeds its max spend—even by a single lamport—MandateGuard returns 'BLOCKED', halting the workflow immediately. Trustless, deterministic verification for autonomous execution on Solana."
+## 0:00–0:12 — Problem
+
+**Visual:** README title + architecture.
+
+**Say:**
+
+"An autonomous agent can send a valid Solana transaction and still fail the business intent. It might overspend, receive too little, use the wrong destination, or replay an unrelated transaction as proof. MandateGuard separates execution from verification."
+
+---
+
+## 0:12–0:27 — Core design
+
+**Visual:** Architecture diagram.
+
+**Say:**
+
+"The agent receives a machine-checkable Mandate: max input, min output, expected mints, destination, signer, reserve requirement, and a unique mandate binding. The agent can execute, but it cannot authorize its own next step."
+
+---
+
+## 0:27–0:38 — Independent verification
+
+**Visual:** Briefly show `src/verifier/solanaVerifier.ts` or the README flow.
+
+**Say:**
+
+"After execution, MandateGuard independently reconstructs the finalized transaction from Solana data and checks the realized outcome. The workflow continues only if the verifier returns VERIFIED."
+
+---
+
+## 0:38–1:06 — Run the proof
+
+**Visual:** Terminal.
+
+Run:
+
+```bash
+npm run demo
+```
+
+As the three scenarios print, say:
+
+"This demo uses one frozen, real Solana mainnet transaction and passes it through the production verifier locally. The original mandate verifies. The exact same transaction under the wrong mandate binding is blocked. Then we tighten max input by one unit, and the same transaction is blocked again."
+
+Pause long enough for the three statuses to be visible.
+
+---
+
+## 1:06–1:20 — Evaluation rigor
+
+**Visual:** README evidence section or `docs/PHASE5_EVALUATION_HISTORY.md`.
+
+**Say:**
+
+"The live run also exposed two defects in our first verifier: ATA rent was being counted as swap input, and the SOL reserve check used the wrong balance semantics. We preserved the failure, fixed the evaluator, added regression tests, and replayed the exact immutable transaction."
+
+---
+
+## 1:20–1:30 — Close
+
+**Visual:** Terminal summary + GitHub repo.
+
+**Say:**
+
+"MandateGuard's rule is simple: a successful transaction is not automatically a successful business action. Agents may execute, but only independently verified outcomes unlock what happens next."
+
+---
+
+## What must be visible in the recording
+
+- project name: MandateGuard
+- `npm run demo`
+- scenario 1: `VERIFIED`
+- scenario 2: `missing_or_invalid_mandate_binding`
+- scenario 3: `max_input_exceeded`
+- "No transaction broadcast"
+- "No SOL spent"
+- public GitHub repository
+
+## Avoid
+
+- exposing `.env`, RPC endpoints, or wallet secrets
+- opening `verify-live.ts` and accidentally invoking live RPC
+- claiming the memo nonce is itself a cryptographic proof
+- claiming verifier v1.0 passed
+- spending additional SOL for the recording
