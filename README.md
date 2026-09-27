@@ -6,12 +6,12 @@
 AI agents are increasingly executing on-chain transactions, but they operate as black boxes with blank checks. If an agent hallucinates, is prompt-injected, or gets exploited, it can drain a treasury or route funds to an attacker. Traditional limits rely on the agent policing itself—which means if the agent is compromised, the limits are compromised.
 
 ## The Solution (30 Seconds)
-**MandateGuard** is a deterministic, zero-trust verification layer that cryptographically binds an AI's predefined intent (a **Mandate**) to its actual on-chain execution. 
+**MandateGuard** is a deterministic, zero-trust verification layer that binds an AI's predefined intent (a **Mandate**) to its actual signed on-chain execution using a canonical transaction memo. 
 
 Before an autonomous agent is allowed to proceed to its next workflow step, MandateGuard independently fetches the finalized transaction from the Solana blockchain (bypassing the agent) and verifies that:
 1. **Constraints were met:** Max input spent, min output received, and exact destination accounts match the mandate.
 2. **Infrastructure is isolated:** Rent costs (e.g., first-time ATA creation) are strictly separated from token swap expenditure.
-3. **No Replay Attacks:** A cryptographically secure nonce injected into the transaction memo guarantees the transaction is uniquely bound to the specific mandate.
+3. **No Replay Attacks:** A unique mandate nonce carried in the signed transaction memo binds the observed transaction to the specific mandate and prevents unrelated historical transactions from satisfying it.
 
 If the agent goes out of bounds, MandateGuard returns a definitive **`BLOCKED`** status, halting the workflow before further damage occurs.
 
@@ -72,3 +72,8 @@ flowchart TD
 
 ## Why This Matters for Autonomous Agents
 As Agents move from read-only copilots to autonomous on-chain actors, they need guardrails that exist **outside of their own context window**. MandateGuard provides a deterministic, cryptographic firewall between an agent's intent and its authorization to continue operating, establishing the foundation for secure, scalable agentic finance on Solana.
+
+
+## Evidence Provenance
+
+The judge-facing proof is the frozen live-mainnet fixture set under `scenarios/fixtures/live_*`, including the finalized RPC payload and verifier v1.1 evidence. Synthetic/demo evidence is not presented as live proof.
