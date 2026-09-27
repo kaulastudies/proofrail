@@ -1,0 +1,17 @@
+{
+  "mandateId": "live-mandate-001",
+  "nonce": "f4cd7ad3d83aecda",
+  "transactionSignature": "67YtUCn89S2JfAdjfpmcRSk4FFbq8xnfRfYdo7z2oCdpPL9RTJuLQYccQRCKRdXcApJKKiXKhAzLRJ9M6uifgnmY",
+  "slot": 450976346,
+  "blockTime": 1790506608,
+  "fee": 8506,
+  "evidenceSource": "live",
+  "rawTransactionHash": "91382a835167c45ed533bb9ca5b36052c8ccc39a60c64f7e40facb145eaeace4",
+  "rawPayloadPath": "scenarios/fixtures/live_finalized_tx.raw.json",
+  "capturedAt": "2026-09-27T10:56:57.842Z",
+  "verifierVersion": "1.0",
+  "verificationStatus": "VERIFIED",
+  "failedInvariants": [],
+  "nextActionAuthorized": true,
+  "verifiedAt": "2026-09-27T11:02:03.605Z"
+}

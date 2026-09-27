@@ -1,0 +1,40 @@
+{
+  "name": "proofrail",
+  "version": "1.0.0",
+  "description": "MandateGuard — deterministic verification for autonomous Solana execution",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "demo": "ts-node scripts/demo.ts",
+    "test": "jest",
+    "typecheck": "tsc --noEmit",
+    "verify:live": "ts-node scripts/verify-live.ts"
+  },
+  "keywords": [
+    "solana",
+    "agents",
+    "verification",
+    "jupiter",
+    "treasury"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@solana/web3.js": "^1.99.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^26.6.3",
+    "bs58": "^6.0.0",
+    "jest": "^30.5.2",
+    "ts-jest": "^29.4.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "zod": "^4.6.5"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.4"
+  }
+}

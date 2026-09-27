@@ -1,0 +1,54 @@
+{
+  "signature": "unrelated_signature_789",
+  "transaction": {
+    "blockTime": 1700000000,
+    "meta": {
+      "err": null,
+      "fee": 5000,
+      "preTokenBalances": [
+        {
+          "accountIndex": 1,
+          "mint": "SomeOtherMint1111111111111111111111111111111",
+          "owner": "OperatorWallet111111111111111111111111111111",
+          "uiTokenAmount": {
+            "amount": "100000000"
+          }
+        }
+      ],
+      "postTokenBalances": [
+        {
+          "accountIndex": 1,
+          "mint": "SomeOtherMint1111111111111111111111111111111",
+          "owner": "OperatorWallet111111111111111111111111111111",
+          "uiTokenAmount": {
+            "amount": "90000000"
+          }
+        }
+      ],
+      "preBalances": [
+        14246835200,
+        2039280,
+        500000000
+      ],
+      "postBalances": [
+        14246830200,
+        2039280,
+        560000000
+      ]
+    },
+    "transaction": {
+      "message": {
+        "accountKeys": [
+          {
+            "pubkey": "OperatorWallet111111111111111111111111111111",
+            "signer": true
+          }
+        ],
+        "instructions": []
+      },
+      "signatures": [
+        "unrelated_signature_789"
+      ]
+    }
+  }
+}

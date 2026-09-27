@@ -1,0 +1,46 @@
+{
+  "mandate": {
+    "mandateId": "demo-mandate-1",
+    "version": "1.0",
+    "action": "SWAP",
+    "cluster": "mainnet-beta",
+    "inputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "outputMint": "So11111111111111111111111111111111111111112",
+    "maxInputAmount": 100000000,
+    "minOutputAmount": 50000000,
+    "destinationAccount": "OperatorWallet111111111111111111111111111111",
+    "minUsdcReserve": 0,
+    "expiry": 1800000000000,
+    "nonce": "demo-nonce",
+    "signerIdentity": "OperatorWallet111111111111111111111111111111",
+    "policyVersion": "1.0"
+  },
+  "mandateHash": "38e7fbd2c2a3729e03533b8e53f0173eda3d20934af88016b71cde95a8460ba6",
+  "policyVersion": "1.0",
+  "transactionSignature": "mocked_historical_jupiter_swap_signature_123",
+  "observations": [
+    {
+      "account": "OperatorWallet111111111111111111111111111111",
+      "preBalance": "100000000",
+      "postBalance": "90000000",
+      "delta": "-10000000"
+    },
+    {
+      "account": "OperatorWallet111111111111111111111111111111",
+      "preBalance": "500000000",
+      "postBalance": "560000000",
+      "delta": "60000000"
+    }
+  ],
+  "verifierVersion": "1.0.0",
+  "verificationStatus": "VERIFIED",
+  "failedInvariants": [],
+  "evidenceTimestamps": {
+    "generatedAt": 1790493252064,
+    "transactionFinalizedAt": 1790493247064
+  },
+  "trustAssumptions": [
+    "RPC Node is honest",
+    "Execution was finalized"
+  ]
+}

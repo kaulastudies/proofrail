@@ -1,0 +1,46 @@
+{
+  "mandate": {
+    "mandateId": "demo-mandate-1",
+    "version": "1.0",
+    "action": "SWAP",
+    "cluster": "mainnet-beta",
+    "inputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "outputMint": "So11111111111111111111111111111111111111112",
+    "maxInputAmount": "10000000",
+    "minOutputAmount": "50000000",
+    "destinationAccount": "AttackerAccount222222222222222222222222222222",
+    "minUsdcReserve": "0",
+    "expiry": 1790495935949,
+    "nonce": "demo-nonce",
+    "signerIdentity": "OperatorAccount111111111111111111111111111111",
+    "policyVersion": "1.0"
+  },
+  "mandateHash": "31441b5bcbe4134cdfe2c7ec9aa77c0611f5c616f1e01681cbef25fd926df7ea",
+  "policyVersion": "1.0",
+  "transactionSignature": "mock_tx_signature_abc123",
+  "observations": [
+    {
+      "account": "OperatorAccount111111111111111111111111111111",
+      "preBalance": "100000000",
+      "postBalance": "90000000",
+      "delta": "-10000000"
+    },
+    {
+      "account": "OperatorAccount111111111111111111111111111111",
+      "preBalance": "10000000",
+      "postBalance": "70000000",
+      "delta": "60000000"
+    }
+  ],
+  "verifierVersion": "1.0.0",
+  "verificationStatus": "VERIFIED",
+  "failedInvariants": [],
+  "evidenceTimestamps": {
+    "generatedAt": 1790492335949,
+    "transactionFinalizedAt": 1790492330949
+  },
+  "trustAssumptions": [
+    "RPC Node is honest",
+    "Execution was finalized"
+  ]
+}

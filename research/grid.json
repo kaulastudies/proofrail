@@ -1,0 +1,30 @@
+[
+  {
+    "label": "grid-category",
+    "path": "https://beta.node.thegrid.id/graphql",
+    "body": {
+      "query": "query($types:[String!]!){products(limit:35,where:{_and:[{productType:{slug:{_in:$types}}},{_or:[{productDeployments:{smartContractDeployment:{deployedOnProduct:{name:{_eq:\"Solana Mainnet\"}}}}},{supportsProducts:{supportsProduct:{name:{_eq:\"Solana Mainnet\"}}}},{root:{profileTags:{tag:{slug:{_eq:\"solana\"}}}}}]},{_not:{productStatus:{slug:{_in:[\"discontinued\",\"support_ended\"]}}}}]}){id name productType{slug} productStatus{slug} root{slug urlMain gridRank{score}}}}",
+      "variables": {
+        "types": [
+          "ai_agent_platform",
+          "ai_agent_framework",
+          "embedded_wallet"
+        ]
+      }
+    }
+  },
+  {
+    "label": "grid-keyword",
+    "path": "https://beta.node.thegrid.id/graphql",
+    "body": {
+      "query": "{products(limit:30,where:{_or:[{description:{_contains:\"policy\"}},{name:{_contains:\"Swig\"}},{name:{_contains:\"Squads\"}},{name:{_contains:\"Turnkey\"}},{name:{_contains:\"Blockaid\"}},{name:{_contains:\"Privy\"}}]}){id name description productType{slug} productStatus{slug} root{slug urlMain}}}"
+    }
+  },
+  {
+    "label": "grid-saturation",
+    "path": "https://beta.node.thegrid.id/graphql",
+    "body": {
+      "query": "{productsAggregate(filter_input:{where:{_and:[{productType:{slug:{_in:[\"ai_agent_platform\",\"ai_agent_framework\",\"embedded_wallet\"]}}},{root:{profileTags:{tag:{slug:{_eq:\"solana\"}}}}},{_not:{productStatus:{slug:{_in:[\"discontinued\",\"support_ended\"]}}}}]}}){_count rootId{_count_distinct}}}"
+    }
+  }
+]

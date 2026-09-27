@@ -1,0 +1,91 @@
+{
+  "mandate": {
+    "mandateId": "live-mandate-001",
+    "version": "1.0",
+    "action": "SWAP",
+    "cluster": "mainnet-beta",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "maxInputAmount": "1000000",
+    "minOutputAmount": "123576",
+    "destinationAccount": "oSw7rJhJTUq5xqkAAWwRnxhWP8uwbAtQpdtuiEt4czu",
+    "minUsdcReserve": "0",
+    "expiry": 1790510217839,
+    "nonce": "f4cd7ad3d83aecda",
+    "signerIdentity": "oSw7rJhJTUq5xqkAAWwRnxhWP8uwbAtQpdtuiEt4czu",
+    "policyVersion": "1.0"
+  },
+  "mandateHash": "ea29e514b35abce250514e74fed40c76ce1195e23eb55d056703e2248c4f0678",
+  "policyVersion": "1.0",
+  "transactionSignature": "67YtUCn89S2JfAdjfpmcRSk4FFbq8xnfRfYdo7z2oCdpPL9RTJuLQYccQRCKRdXcApJKKiXKhAzLRJ9M6uifgnmY",
+  "observations": [
+    {
+      "account": "AhhoxZDmsg2snm85vPjqzYzEYESoKfb4KmTj4HrBBNwY",
+      "preBalance": "114707026844",
+      "postBalance": "114707278644",
+      "delta": "251800"
+    },
+    {
+      "account": "AhhoxZDmsg2snm85vPjqzYzEYESoKfb4KmTj4HrBBNwY",
+      "preBalance": "5273941543",
+      "postBalance": "5273910319",
+      "delta": "-31224"
+    },
+    {
+      "account": "5XRqv7LCoC5FhWKk5JN8n4kCrJs3e4KH1XsYzKeMd5Nt",
+      "preBalance": "564411490755",
+      "postBalance": "564412238955",
+      "delta": "748200"
+    },
+    {
+      "account": "5XRqv7LCoC5FhWKk5JN8n4kCrJs3e4KH1XsYzKeMd5Nt",
+      "preBalance": "26390638386",
+      "postBalance": "26390545870",
+      "delta": "-92516"
+    },
+    {
+      "account": "GF8SKKobum6UJnhX2mLHePU38htg5vdr9zcY4jH8Pqs2",
+      "preBalance": "146914509777",
+      "postBalance": "146914541001",
+      "delta": "31224"
+    },
+    {
+      "account": "F2KCaXcp7AoQtxTDvNEDCyMyWjSCAMWNzcyN9dsPfPs5",
+      "preBalance": "364340207063",
+      "postBalance": "364340175844",
+      "delta": "-31219"
+    },
+    {
+      "account": "oSw7rJhJTUq5xqkAAWwRnxhWP8uwbAtQpdtuiEt4czu",
+      "preBalance": "0",
+      "postBalance": "123735",
+      "delta": "123735"
+    },
+    {
+      "account": "oSw7rJhJTUq5xqkAAWwRnxhWP8uwbAtQpdtuiEt4czu",
+      "preBalance": "0",
+      "postBalance": "-2488440",
+      "delta": "-2488440"
+    }
+  ],
+  "verifierVersion": "1.1",
+  "evidenceSource": "live",
+  "rawTransactionHash": "8528a988fa24539e162dcd28a74c04232d55622c02c274e796fda35b0055f011",
+  "verificationStatus": "VERIFIED",
+  "failedInvariants": [],
+  "swapInput": "1000000",
+  "infrastructureCost": "1488440",
+  "networkFee": "8506",
+  "totalWalletExpenditure": "2496946",
+  "actualOutput": "123735",
+  "replayStatus": "THWARTED",
+  "evidenceTimestamps": {
+    "generatedAt": 1790514389728,
+    "transactionFinalizedAt": 1790514384728
+  },
+  "trustAssumptions": [
+    "RPC Node is honest",
+    "Execution was finalized"
+  ],
+  "normalizedEvidenceHash": "ece12ce8547706457d05c803f62fc5e6b6fb23877d8a141f555bce7275a17d2b"
+}

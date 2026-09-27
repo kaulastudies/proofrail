@@ -1,0 +1,7 @@
+[
+ {"label":"archive-agents","path":"/search/archives","body":{"query":"AI agents wallets payments verification","limit":5,"maxChunksPerDoc":1}},
+ {"label":"archive-investors","path":"/search/archives","body":{"query":"agent payments trust infrastructure investment","limit":5,"maxChunksPerDoc":1}},
+ {"label":"agency-full","path":"/archives/2b640ae9-558b-4e2f-a978-97304b1d3c7b?maxChars=13000"},
+ {"label":"chronology","path":"/filters"},
+ {"label":"breakout-analysis","path":"/analyze","body":{"cohort":{"hackathons":["breakout"]},"dimensions":["tracks","problemTags","techStack"],"topK":8,"samplePerBucket":1}}
+]

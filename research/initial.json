@@ -1,0 +1,10 @@
+[
+ {"label":"intent-verification","path":"/search/projects","body":{"query":"Verify autonomous AI agent transactions enforce wallet policies and produce auditable execution receipts","limit":10}},
+ {"label":"treasury-pain","path":"/search/projects","body":{"query":"Prevent automated treasury agents losing funds unauthorized spending wrong transfers and reconcile actual transaction outcomes","limit":10}},
+ {"label":"accelerator","path":"/search/projects","body":{"query":"Verify autonomous AI agent transactions enforce wallet policies and produce auditable execution receipts","limit":10,"filters":{"acceleratorOnly":true}}},
+ {"label":"winners","path":"/search/projects","body":{"query":"AI agent wallet security transaction verification policy enforcement","limit":10,"filters":{"winnersOnly":true}}},
+ {"label":"archive-concepts","path":"/search/archives","body":{"query":"delegated authority accountability verifiable computation","limit":5,"maxChunksPerDoc":1}},
+ {"label":"archive-agents","path":"/search/archives","body":{"query":"AI agents wallets payments verification","limit":6,"maxChunksPerDoc":1}},
+ {"label":"chronology","path":"/filters"},
+ {"label":"breakout-analysis","path":"/analyze","body":{"cohort":{"hackathons":["breakout"]},"dimensions":["tracks","problemTags","techStack"],"topK":8,"samplePerBucket":1}}
+]

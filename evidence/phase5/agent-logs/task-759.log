@@ -1,0 +1,17 @@
+◇ injected env (1) from .env
+=== MANDATEGUARD LIVE VERIFICATION ===
+Transaction Signature: 67YtUCn89S2JfAdjfpmcRSk4FFbq8xnfRfYdo7z2oCdpPL9RTJuLQYccQRCKRdXcApJKKiXKhAzLRJ9M6uifgnmY
+Mandate ID: live-mandate-001
+Nonce: f4cd7ad3d83aecda
+Expected Memo: live-mandate-001:f4cd7ad3d83aecda
+
+--- Verification ---
+Verification Status: VERIFIED
+Failed Invariants: []
+Next Action Authorized: true
+
+--- Replay Attack Test ---
+Replay Attempt Status: FAILED_VERIFICATION
+Replay Failed Invariants: [ 'missing_or_invalid_mandate_binding' ]
+Replay Attack Thwarted: true
+FATAL: Do not know how to serialize a BigInt

@@ -1,0 +1,16 @@
+{
+  "mandateId": "live-mandate-001",
+  "version": "1.0",
+  "action": "SWAP",
+  "cluster": "mainnet-beta",
+  "inputMint": "So11111111111111111111111111111111111111112",
+  "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+  "maxInputAmount": "1000000",
+  "minOutputAmount": "123576",
+  "destinationAccount": "oSw7rJhJTUq5xqkAAWwRnxhWP8uwbAtQpdtuiEt4czu",
+  "minUsdcReserve": "0",
+  "expiry": 1790510217839,
+  "nonce": "f4cd7ad3d83aecda",
+  "signerIdentity": "oSw7rJhJTUq5xqkAAWwRnxhWP8uwbAtQpdtuiEt4czu",
+  "policyVersion": "1.0"
+}

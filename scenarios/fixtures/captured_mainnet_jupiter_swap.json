@@ -1,0 +1,70 @@
+{
+  "signature": "mocked_historical_jupiter_swap_signature_123",
+  "transaction": {
+    "blockTime": 1700000000,
+    "meta": {
+      "err": null,
+      "fee": 5000,
+      "preTokenBalances": [
+        {
+          "accountIndex": 1,
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "owner": "OperatorWallet111111111111111111111111111111",
+          "uiTokenAmount": {
+            "amount": "100000000",
+            "decimals": 6
+          }
+        },
+        {
+          "accountIndex": 2,
+          "mint": "So11111111111111111111111111111111111111112",
+          "owner": "OperatorWallet111111111111111111111111111111",
+          "uiTokenAmount": {
+            "amount": "500000000",
+            "decimals": 9
+          }
+        }
+      ],
+      "postTokenBalances": [
+        {
+          "accountIndex": 1,
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "owner": "OperatorWallet111111111111111111111111111111",
+          "uiTokenAmount": {
+            "amount": "90000000",
+            "decimals": 6
+          }
+        },
+        {
+          "accountIndex": 2,
+          "mint": "So11111111111111111111111111111111111111112",
+          "owner": "OperatorWallet111111111111111111111111111111",
+          "uiTokenAmount": {
+            "amount": "560000000",
+            "decimals": 9
+          }
+        }
+      ]
+    },
+    "transaction": {
+      "message": {
+        "accountKeys": [
+          {
+            "pubkey": "OperatorWallet111111111111111111111111111111",
+            "signer": true
+          }
+        ],
+        "instructions": [
+          {
+            "program": "spl-memo",
+            "programId": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",
+            "parsed": "demo-mandate-1:demo-nonce"
+          }
+        ]
+      },
+      "signatures": [
+        "mocked_historical_jupiter_swap_signature_123"
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+PASS tests/stateMachine.test.ts
+PASS tests/evidence.test.ts
+FAIL tests/solanaVerifier.test.ts
+  ● SolanaVerifier Regression Tests › V1.1 Semantics (Infrastructure Rent & Reserves) › first-time USDC ATA creation separates rent from swap input
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "1000"
+    Received: "0"
+
+      237 |       expect(result.verificationStatus).toBe(VerificationState.VERIFIED);
+      238 |       expect(result.failedInvariants).not.toContain('max_input_exceeded');
+    > 239 |       expect(result.swapInput).toBe('1000');
+          |                                ^
+      240 |       expect(result.infrastructureCost).toBe('2039280');
+      241 |       expect(result.totalWalletExpenditure).toBe('2045280');
+      242 |     });
+
+      at Object.<anonymous> (tests/solanaVerifier.test.ts:239:32)
+
+  ● SolanaVerifier Regression Tests › V1.1 Semantics (Infrastructure Rent & Reserves) › pre-existing ATA does not deduct rent incorrectly
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "1000"
+    Received: "0"
+
+      269 |       
+      270 |       expect(result.verificationStatus).toBe(VerificationState.VERIFIED);
+    > 271 |       expect(result.swapInput).toBe('1000');
+          |                                ^
+      272 |       expect(result.infrastructureCost).toBe('0');
+      273 |       expect(result.totalWalletExpenditure).toBe('6000');
+      274 |     });
+
+      at Object.<anonymous> (tests/solanaVerifier.test.ts:271:32)
+
+Test Suites: 1 failed, 2 passed, 3 total
+Tests:       2 failed, 21 passed, 23 total
+Snapshots:   0 total
+Time:        6.747 s
+Ran all test suites.

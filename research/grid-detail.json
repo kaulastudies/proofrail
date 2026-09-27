@@ -1,0 +1,30 @@
+[
+  {
+    "label": "grid-closest",
+    "path": "https://beta.node.thegrid.id/graphql",
+    "body": {
+      "query": "{products(limit:30,where:{_or:[{name:{_contains:\"Swig\"}},{name:{_contains:\"Grid\"}},{name:{_contains:\"Mercantill\"}},{name:{_contains:\"AgentGuard\"}},{name:{_contains:\"Crossmint\"}},{name:{_contains:\"Forta\"}},{name:{_contains:\"Phylax\"}},{name:{_contains:\"Vincent\"}}]}){id name productType{slug} productStatus{slug} root{slug urlMain}}}"
+    }
+  },
+  {
+    "label": "grid-roots",
+    "path": "https://beta.node.thegrid.id/graphql",
+    "body": {
+      "query": "{roots(where:{slug:{_in:[\"turnkey\",\"blockaid_io\",\"Squads\"]}}){slug urlMain profileInfos{tagLine descriptionShort} products(limit:10){id name productType{slug} productStatus{slug}}}}"
+    }
+  },
+  {
+    "label": "grid-dependencies",
+    "path": "https://beta.node.thegrid.id/graphql",
+    "body": {
+      "query": "{productsById(id:\"id1745236296-hZ733bORTmmS_DvNylorgw\"){id name supportsProducts(limit:25){supportsProduct{id name root{slug}}}supportsProductsBySupportsProductId(limit:25){product{id name root{slug}}}}}"
+    }
+  },
+  {
+    "label": "grid-same-scope-count",
+    "path": "https://beta.node.thegrid.id/graphql",
+    "body": {
+      "query": "{productsAggregate(filter_input:{where:{_and:[{productType:{slug:{_in:[\"ai_agent_platform\",\"ai_agent_framework\",\"embedded_wallet\"]}}},{_or:[{productDeployments:{smartContractDeployment:{deployedOnProduct:{name:{_eq:\"Solana Mainnet\"}}}}},{supportsProducts:{supportsProduct:{name:{_eq:\"Solana Mainnet\"}}}},{root:{profileTags:{tag:{slug:{_eq:\"solana\"}}}}}]},{_not:{productStatus:{slug:{_in:[\"discontinued\",\"support_ended\"]}}}}]}}){_count rootId{_count_distinct}}}"
+    }
+  }
+]

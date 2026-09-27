@@ -1,0 +1,16 @@
+{
+    "mandateId": "demo-mandate-1",
+    "version": "1.0",
+    "action": "SWAP",
+    "cluster": "mainnet-beta",
+    "inputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "outputMint": "So11111111111111111111111111111111111111112",
+    "maxInputAmount": 100000000,
+    "minOutputAmount": 50000000,
+    "destinationAccount": "OperatorWallet111111111111111111111111111111",
+    "minUsdcReserve": 0,
+    "expiry": 1800000000000,
+    "nonce": "demo-nonce",
+    "signerIdentity": "OperatorWallet111111111111111111111111111111",
+    "policyVersion": "1.0"
+}

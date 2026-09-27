@@ -1,0 +1,7 @@
+[
+ {"label":"tag-followup","path":"/search/projects","body":{"limit":8,"filters":{"problemTags":["autonomous fund drain risk"]}}},
+ {"label":"security-specific","path":"/search/projects","body":{"query":"transaction simulation security policy guardrails verification receipts","limit":8,"diversify":false}},
+ {"label":"mercantill-detail","path":"/projects/by-slug/mercantill"},
+ {"label":"agent-cred-detail","path":"/projects/by-slug/agent-cred"},
+ {"label":"mcpay-detail","path":"/projects/by-slug/mcpay"}
+]
