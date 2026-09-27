@@ -1,5 +1,7 @@
 # MandateGuard 🛡️
 
+[![CI](https://github.com/kaulastudies/proofrail/actions/workflows/ci.yml/badge.svg)](https://github.com/kaulastudies/proofrail/actions/workflows/ci.yml)
+
 **Trustless On-Chain Verification for Autonomous AI Agents.**
 
 ## The Problem (30 Seconds)
@@ -77,3 +79,10 @@ As Agents move from read-only copilots to autonomous on-chain actors, they need 
 ## Evidence Provenance
 
 The judge-facing proof is the frozen live-mainnet fixture set under `scenarios/fixtures/live_*`, including the finalized RPC payload and verifier v1.1 evidence. Synthetic/demo evidence is not presented as live proof.
+
+## Submission Resources
+
+- [90-second demo script](docs/DEMO_SCRIPT.md)
+- [Colosseum submission draft](docs/COLOSSEUM_SUBMISSION.md)
+- [Phase 5 evaluation history](docs/PHASE5_EVALUATION_HISTORY.md)
+
